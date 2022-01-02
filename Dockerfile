@@ -1,5 +1,7 @@
 FROM centos:6
 
+LABEL org.opencontainers.image.source https://github.com/nmaya/docker-centos6-vault
+
 RUN sed -i -e 's/^#baseurl=/baseurl=/' \
            -e 's/^mirrorlist=/#mirrorlist=/' \
            -e 's!http://mirror.centos.org/centos/$releasever/!http://vault.centos.org/6.10/!' \
